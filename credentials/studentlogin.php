@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login</title>
-    <link rel="stylesheet" href="studentlogin.css">
+    <link rel="stylesheet" href="./aesthetics/studentlogin.css">
 </head>
 <body>
 <div>

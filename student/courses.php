@@ -2,6 +2,11 @@
 session_start();
 include '../database.php';
 
+if (!isset($_SESSION['studentID'])) {
+    header('Location: ../credentials/studentlogin.php');
+    exit;
+}
+
 $student_id = $_SESSION['studentID'];
 
 $sqlCheck = "SELECT sp.course_id, sp.reason_for_course, sp.status, c.course_name 

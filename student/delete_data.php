@@ -3,6 +3,11 @@ session_start();
 
 include '../database.php';
 
+if (!isset($_SESSION['studentID'])) {
+    header('Location: ../credentials/studentlogin.php');
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm_delete'])) {
     if (!isset($_SESSION['studentID'])) {
         header("Location: ../credentials/studentlogin.php?error=Unauthorized");

@@ -2,6 +2,11 @@
 session_start();
 include '../database.php';
 
+if (!isset($_SESSION['studentID'])) {
+    header('Location: ../credentials/studentlogin.php');
+    exit;
+}
+
 $studentID = $_SESSION['studentID'];
 
 $query = "
